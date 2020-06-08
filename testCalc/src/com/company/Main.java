@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        while(true) {
+        while (true) {
             System.out.println("Input");
             Scanner scanner = new Scanner(System.in);
             String tapedValue = scanner.nextLine();
@@ -116,7 +116,7 @@ public class Main {
                     if (lexemes.lexemes.get(0).type.toString() == "ROM") {
                         LexemeBuffer.isRomaValue = true;
                     }
-                        return value;
+                    return value;
 
                 default:
                     throw new RuntimeException("Unexpected token: " + lexeme.value
@@ -209,10 +209,9 @@ public class Main {
     }
 
 
+    public static String getRoman(int number) {
 
-    public  static String getRoman(int number) {
-
-        String riman[] = {"M","XM","CM","D","XD","CD","C","XC","L","XL","X","IX","V","IV","I"};
+        String riman[] = {"M", "XM", "CM", "D", "XD", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
         int arab[] = {1000, 990, 900, 500, 490, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
         StringBuilder result = new StringBuilder();
         int i = 0;
